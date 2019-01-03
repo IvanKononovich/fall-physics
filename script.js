@@ -10,14 +10,15 @@ canv.width = window.innerWidth;
 canv.height = window.innerHeight;
 
 let arrAllParticle = [];
-const SIZEPARTICLE = window.innerWidth/100*0.6;
-const FALLSPEED = SIZEPARTICLE/100*50;
+const SIZEPARTICLE = 8;
+const FALLSPEED = 4;
 let numberCreatedParticle = inputNumberCreatedParticle.value;
 let idRequestAnimationFrame;
 
 function neighborsStop(arr){
     arr.forEach((item)=>{
         item[2].permissionToMove = false;
+        item[2].color = '#124ae5';
     });
 }
 
@@ -57,7 +58,7 @@ function launchAnimation(){
 
             if(item[2].permissionToMove) item[1] += FALLSPEED;
 
-            if(item[1] + SIZEPARTICLE >= window.innerHeight){
+            if(item[1] + SIZEPARTICLE >= canv.height){
                 item[2].permissionToMove = false;
                 item[2].color = '#8e5099';
             }
@@ -70,7 +71,7 @@ function creatureParticle(x,y){
     cancelAnimationFrame(idRequestAnimationFrame);
     arrAllParticle.push([x, y, {
         permissionToMove: true,
-        color: '#124ae5',
+        color: '#a92509',
         neighbors: false,
         particleId: Math.random()
     }]);
@@ -88,6 +89,7 @@ function deleteParticle(){
         if(arrAllParticle[index]) arrAllParticle.splice(index, 1);
     }
     arrAllParticle.forEach((item)=>{
+        item[2].color = '#a92509';
         item[2].permissionToMove = true;
     })
 }

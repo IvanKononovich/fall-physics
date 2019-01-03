@@ -1,7 +1,7 @@
 * {
     user-select: none;
     font-family: sans-serif;
-    font-size: 25px;
+    font-size: 20px;
     text-shadow: 3px 3px 3px #124ae5;
     color: #8e5099;
 }
@@ -21,7 +21,7 @@ body {
 }
 .options {
     z-index: 5;
-    max-width: 350px;
+    max-width: 320px;
     position: absolute;
     left: 30px;
     top: 30px;
