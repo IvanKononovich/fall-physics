@@ -10,7 +10,7 @@ canv.width = window.innerWidth;
 canv.height = window.innerHeight;
 
 let grid = [];
-let QUANTITYCELL = 80;
+let QUANTITYCELL = 50;
 let SIZEGRID = window.innerWidth / QUANTITYCELL;
 let arrAllParticle = [];
 const SIZEPARTICLE = SIZEGRID / 2;
