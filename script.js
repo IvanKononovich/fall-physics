@@ -10,8 +10,8 @@ canv.width = window.innerWidth;
 canv.height = window.innerHeight;
 
 let grid = [];
-let QUANTITYCELL = 30;
-let SIZEGRID = window.innerWidth / QUANTITYCELL;
+const QUANTITYCELL = 30;
+const SIZEGRID = window.innerWidth / QUANTITYCELL;
 let arrAllParticle = [];
 const SIZEPARTICLE = SIZEGRID / 2;
 const FALLSPEED = 4;
@@ -46,7 +46,7 @@ function lines(){
     }
 }
 
-function neighborhoodCheck(arr, target, neighborList){
+function neighborhoodCheck(arr, target){
     arr.forEach((neighbour)=>{
         if(typeof neighbour[0] == 'number'){
             if(neighbour[2].particleId != target[2].particleId){
