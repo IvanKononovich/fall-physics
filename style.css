@@ -29,10 +29,10 @@ body {
 }
 .options * {
     transition: 0.3s;
-    color: #eaeaea;
+    color: #000000;
 }
 .options *:hover {
-    color: #000;
+    text-decoration: underline;
     cursor: pointer;
 }
 .options input {

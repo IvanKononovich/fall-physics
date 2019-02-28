@@ -135,7 +135,9 @@ document.addEventListener('pointermove', (e)=>{
     let y = e.pageY;
     for(let i = 0; i < numberCreatedParticle; i++){
         let accessToCreation = false;
+        
         grid.forEach((cell, index)=>{
+            
             if(cell[0].beginning <= x && cell[0].end >= x){
                 accessToCreation = index;  
                 cell.forEach((item)=>{
@@ -148,8 +150,8 @@ document.addEventListener('pointermove', (e)=>{
                 return;
             } 
         });
-
-        if(accessToCreation){
+        
+        if(accessToCreation !== false){
             creatureParticle(accessToCreation, x, y);
         }
 
